@@ -1,4 +1,4 @@
-require_relative 'card'
+require_relative "card"
 
 class Deck
   attr_reader :cards
@@ -15,10 +15,15 @@ class Deck
   end
 
   def draw
-    # returns a card
+    card = cards.pop
+    return card
   end
 
   def shuffle
-    # shuffles the deck
+    return cards.shuffle!
+  end
+
+  def count
+    return cards.length
   end
 end
